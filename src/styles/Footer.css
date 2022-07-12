@@ -1,0 +1,58 @@
+.footer--container{
+    display: grid;
+}
+@media screen and (max-width: 768px){
+    .footer--container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.main, .help, .categories, .about--us, .help{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+.footer--icons > span{
+    margin-right: 10px;
+}
+
+.help{
+    padding: 20px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+.about--us{
+    padding: 20px;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+.categories{
+    padding: 20px;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start:1;
+    grid-row-end: 2;
+}
+
+.copyright{
+    padding: 20px;
+}
+
+.copyright > p{
+    margin: 0 auto;
+}

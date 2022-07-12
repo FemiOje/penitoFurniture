@@ -1,0 +1,19 @@
+*{
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
+a{
+  color: #58666b83;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #61dafb;
+}
+
+p{
+  color: #58666B;
+}
+

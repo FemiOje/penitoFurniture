@@ -1,0 +1,41 @@
+#instagram--gallery{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.gallery--photos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.photo--container{
+    position: relative;
+}
+
+.instagram--icon{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.gallery--photos > img, .photo--container > img{
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+}
+
+.gallery--photos > img:hover{
+    filter: brightness(50%)
+} 
+
+.gallery--photo > svg{
+    display: none;
+    margin: auto;
+}
+
+.gallery--photo > svg:hover{
+    display: block;
+}
