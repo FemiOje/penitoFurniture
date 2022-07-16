@@ -1,11 +1,47 @@
 .card{
-    width: 170px;
-    height: 200px;
-    background-color: #f0f8ff;
     display: flex;
     flex-direction: column;
+    height: fit-content;
+    max-width: 170px;
+    background: #F8FBFB;
+    border-radius: 8px;
     align-items: center;
-    padding: 16px;
-    margin: 16px;
-    gap: 40px;
+    padding: 0.25rem;
+    margin: 0.25rem;
+}
+/* img{
+    border: 1px solid #1FB890;
+} */
+.card div{
+    /* padding: 1rem; */
+}
+
+/* .card--image{
+    height: 100px;
+    width: 150px;
+} */
+
+.card--text{
+    display: flex;
+    flex-direction: column;
+}
+
+.card--prices{
+    display: flex;
+    flex-direction: row;
+}
+.main--price{
+    color: #A8B6BB;
+    font-weight: 300;
+    padding-right: 1rem;
+}
+.discounted--price{
+    color: #1FB890;
+    padding-left: 1rem;
+}
+
+.card--text > p, .card--prices > p{
+    font-weight:600;
+    font-size:12px;
+    /* line-height:24.46px; */
 }

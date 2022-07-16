@@ -4,6 +4,11 @@
   sans-serif;
 }
 
+section{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 a{
   color: #58666b83;
   text-decoration: none;

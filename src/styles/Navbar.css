@@ -11,19 +11,33 @@ nav{
     margin: 0 auto;
 }
 
-.nav--items > a {
+.nav--items > a > p{
+    /* border: 1px solid #122025; */
     margin-left: 20px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     text-align: center;
     text-decoration: none;
-    color: #122025;
+    color: #58666B;
+    transition: 100ms ease;
 }
 
-.nav--items > a:hover{
-    color: #12202593;
+.nav--items > a > p:hover,
+.nav--items > a > p:active{
+    font-weight: 600;
+    color: #000000;
 }
+
+/* .nav--items > a > p:hover::after,
+.nav--items > a > p:active::after{
+    content: "";
+    width: 30%;
+    background: #122025;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+} */
 
 .search{
     margin-left: 1rem;

@@ -49,6 +49,10 @@
     grid-row-end: 2;
 }
 
+/* a > p:hover{
+    color: #61dafb;
+} */
+
 .copyright{
     padding: 20px;
 }

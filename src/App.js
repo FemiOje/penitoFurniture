@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Collection from './components/Collection';
-import Card from './components/Card';
+import AllCards from './components/AllCards';
 import ServicesAndBenefits from './components/ServicesAndBenefits';
 import CustomerReviews from './components/CustomerReviews';
 import PartnersAndSponsors from './components/PartnersAndSponsors';
@@ -15,7 +15,7 @@ function App() {
       <Navbar />  
       <Hero />  
       <Collection /> 
-      <Card /> 
+      <AllCards /> 
       <ServicesAndBenefits />
       <CustomerReviews />
       <PartnersAndSponsors />

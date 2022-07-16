@@ -6,4 +6,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.sponsors--logos > svg{
+    margin: 0 auto;
+    padding: 2rem;
+    /* vertical-align: middle;
+    align-items: center; */
 }

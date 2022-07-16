@@ -17,7 +17,7 @@ const Collection = () => {
           <button>Sofas</button>
           <button>Outdoor</button>
           <button>Kitchen</button>
-          <button>More</button>
+          <button>Others</button>
         </div>
     </section>
   )
