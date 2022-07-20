@@ -1,9 +1,16 @@
-nav{
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: #0000003d 0px 3px 8px;
+}
+
+.main--nav{
     display: flex;
     padding-left: 2rem;
     padding-right: 2rem;
     align-items: center;
-
 }
 
 .nav--items{
@@ -65,4 +72,38 @@ nav{
         display: block;
         margin-left: auto;
     }
+}
+
+@keyframes growDown {
+    0% {
+      transform: scaleY(0)
+    }
+    80% {
+      transform: scaleY(1)
+    }
+    100% {
+      transform: scaleY(1)
+    }
+  }
+
+.nav--dropdown--items{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;
+    
+    /* position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    perspective: 1000px;
+    display: none; */
+}
+/* .nav--dropdown--items:hover{
+    display: flex;
+} */
+
+.nav--dropdown--items > a:hover{
+    background-color: #ddd;
 }
