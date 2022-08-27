@@ -1,0 +1,12 @@
+#login h2{
+    text-align: center;
+}
+
+.login--button{
+    text-align: center;
+    background-color: #F2C229;
+    color: #ffff;
+    border: none;
+    height: 2rem;
+
+}

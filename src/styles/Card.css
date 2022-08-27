@@ -1,20 +1,16 @@
 .card{
     display: flex;
     flex-direction: column;
-    height: fit-content;
+    /* height: fit-content; */
     max-width: 170px;
     background: #F8FBFB;
     border-radius: 8px;
     align-items: center;
-    padding: 0.25rem;
     margin: 0.25rem;
 }
-/* img{
-    border: 1px solid #1FB890;
+/* .card div{
+    padding: 1rem;
 } */
-.card div{
-    /* padding: 1rem; */
-}
 
 /* .card--image{
     height: 100px;

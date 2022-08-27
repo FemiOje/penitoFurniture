@@ -1,8 +1,5 @@
 import React from 'react'
 import '../styles/Hero.css'
-// import HeroImage1 from '../images/hero-image-1.png'
-// import HeroImage2 from '../images/hero-image-2.png'
-// import HeroImage3 from '../images/hero-image-3.png'
 
 const Hero = () => {
     return (
@@ -16,7 +13,7 @@ const Hero = () => {
                 </h1>
                 <p>We design pieces of furniture and objects that perfectly gap between Beauty and functionality</p>
                 <div className="hero--buttons">
-                    <button className="shop--now">
+                    <button className="shop--now--button">
                         <span>Shop Now</span>
                         <span>
                             <svg width="30" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +21,7 @@ const Hero = () => {
                             </svg>
                         </span>
                     </button>
-                    <button className='watch--video'>
+                    <button className='watch--video--button'>
                         <span className='watch--video--icon'>
                             <svg width="25" height="25" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="26" y="22" width="19" height="23" fill="#122025" />
@@ -33,8 +30,8 @@ const Hero = () => {
                                 </g>
                                 <path d="M33.5 3.6999C33.5 1.6565 31.8385 -0.0211166 29.8076 0.204111C26.6759 0.551411 23.6026 1.33952 20.6801 2.55004C16.6157 4.23357 12.9227 6.70116 9.81192 9.81192C6.70116 12.9227 4.23357 16.6157 2.55004 20.6801C0.866503 24.7445 -1.39838e-07 29.1007 0 33.5C1.39838e-07 37.8993 0.866503 42.2555 2.55004 46.3199C4.23357 50.3843 6.70116 54.0773 9.81192 57.1881C12.9227 60.2988 16.6157 62.7664 20.6801 64.45C23.6026 65.6605 26.6759 66.4486 29.8076 66.7959C31.8385 67.0211 33.5 65.3435 33.5 63.3001C33.5 61.2567 31.8354 59.6271 29.8124 59.3384C27.6531 59.0302 25.5361 58.4519 23.5119 57.6134C20.3453 56.3018 17.468 54.3792 15.0444 51.9556C12.6208 49.532 10.6982 46.6547 9.38657 43.4881C8.07491 40.3215 7.39981 36.9275 7.39981 33.5C7.39981 30.0725 8.07491 26.6785 9.38657 23.5119C10.6982 20.3453 12.6207 17.468 15.0444 15.0444C17.468 12.6207 20.3453 10.6982 23.5119 9.38657C25.5361 8.54813 27.6531 7.96979 29.8124 7.66162C31.8353 7.37291 33.5 5.7433 33.5 3.6999Z" fill="#F2C229" />
                                 <defs>
-                                    <filter id="filter0_d_1_39" x="8.125" y="12.125" width="51.75" height="51.75" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <filter id="filter0_d_1_39" x="8.125" y="12.125" width="51.75" height="51.75" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                                         <feOffset dy="4" />
                                         <feGaussianBlur stdDeviation="2" />

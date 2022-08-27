@@ -1,6 +1,11 @@
+footer{
+    background-color: #f0efef;
+}
+
 .footer--container{
     display: grid;
 }
+
 @media screen and (max-width: 768px){
     .footer--container{
         display: flex;
@@ -55,8 +60,10 @@
 
 .copyright{
     padding: 20px;
+    
 }
 
 .copyright > p{
     margin: 0 auto;
+    text-align: left;
 }

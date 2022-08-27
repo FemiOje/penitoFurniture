@@ -74,6 +74,12 @@
     }
 }
 
+.hamburger > button{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 @keyframes growDown {
     0% {
       transform: scaleY(0)
@@ -92,11 +98,11 @@
     text-align: center;
     animation: growDown 200ms ease-in-out forwards;
     transform-origin: top center;
+    width: 100%;
     
     /* position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
     perspective: 1000px;
     display: none; */
 }

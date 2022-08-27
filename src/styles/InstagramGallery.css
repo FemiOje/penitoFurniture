@@ -1,13 +1,17 @@
-#instagram--gallery{
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
 .gallery--photos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+    .gallery--photos{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
+  }
 
 .photo--container{
     position: relative;

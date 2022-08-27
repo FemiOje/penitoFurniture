@@ -1,7 +1,10 @@
 import React from 'react'
 import '../styles/Collection.css'
+import Card from './Card'
+
 
 const Collection = () => {
+  
   return (
     <section id='collection'>
         <div className="collection--text">
@@ -19,6 +22,7 @@ const Collection = () => {
           <button>Kitchen</button>
           <button>Others</button>
         </div>
+        <Card />
     </section>
   )
 }

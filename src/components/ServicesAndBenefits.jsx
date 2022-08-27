@@ -54,7 +54,10 @@ const ServicesAndBenefits = () => {
         </div>
 
       </div>
-      <button className='know--more'>Know More</button>
+      <div>
+        <button className='know--more'>Know More</button>
+      </div>
+    
     </section>
   )
 }

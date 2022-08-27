@@ -102,7 +102,15 @@ const Footer = () => {
                 </div>
             </div>
             <div className='copyright'>
-                <p>&copy; 2022 | <strong>Penito</strong> by Ibraheem | Ingenious_02 </p>
+                <p>&copy; 2022 | <strong>Penito Furniture</strong></p>
+                <br />
+                <p>Design by <strong>Ibraheem (Ingenious_02)</strong></p>
+                (<a href='https://twitter.com/Ingenious_02' target='_blank'>Twitter </a>|<a href='https://t.co/lIn20BF2NH' target='_blank'> LinkedIn</a> )
+                <br /> <br />
+                <p>Code by <strong>Oluwafemi Ojetokun</strong>
+                (<a href='https://twitter.com/OjetokunF' target='_blank'>Twitter </a>|<a href='https://github.com/FemiOje'> GitHub</a> )
+                </p>
+                <br />
             </div>
         </footer>
     )

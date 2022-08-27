@@ -8,6 +8,8 @@ import CustomerReviews from './components/CustomerReviews';
 import PartnersAndSponsors from './components/PartnersAndSponsors';
 import InstagramGallery from './components/InstagramGallery';
 import Footer from './components/Footer';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <PartnersAndSponsors />
       <InstagramGallery />
       <Footer />
+      {/* <Login />
+      <Signup /> */}
     </>
   );
 }

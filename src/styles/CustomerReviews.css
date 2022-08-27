@@ -1,6 +1,5 @@
 #customer--reviews{
     background-color: #FAFAFA;
-    padding: 2rem;
 }
 
 .customer--reviews--container{
@@ -17,7 +16,6 @@
 .customer--reviews--text{
     /* display: flex;
     flex-direction: column; */
-    padding: 1rem;
     text-align: start;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -31,9 +29,12 @@
     padding-bottom: 1rem;
 }
 
+.customer--reviews--image{
+    margin:0 auto;
+}
+
 .customer--reviews--image > img{
     max-width: 100%;
-    /* padding: 1rem; */
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;

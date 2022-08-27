@@ -8,7 +8,7 @@ import GalleryPhoto5 from '../images/gallery-photo-5.png'
 const InstagramGallery = () => {
   return (
     <section id='instagram--gallery'>
-      <h2>Visit Our Instagram Gallery</h2>
+      <h2>Scroll Through Our Instagram Gallery</h2>
       <div className="gallery--photos">
         {/* <div className='photo--container'> */}
           <img src={GalleryPhoto1} alt="gallery-1" />
