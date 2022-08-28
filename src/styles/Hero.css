@@ -65,13 +65,10 @@
 .hero--buttons > button{
     border: 1px solid black;
 }
+
 @media screen and (max-width: 768px){
     .hero--text{
         text-align: center;
-    }
-
-    .hero--buttons > button{
-        margin: 0 auto;
     }
     
     .hero--images{
@@ -84,11 +81,13 @@
     border: none;
     background-color: #1C2A2F;
     color: #FBFDFD;
+    margin: 1rem;
 }
 
 .watch--video--button{ 
     border-radius: 8px;
     border: none;
+    margin: 1rem;
 }
 
 .shop--now--button > span, .watch--video--button > span{

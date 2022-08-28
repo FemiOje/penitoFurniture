@@ -32,3 +32,16 @@ a{
 p{
   color: #58666B;
 }
+
+.collection--cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .collection--cards{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+  }
+}

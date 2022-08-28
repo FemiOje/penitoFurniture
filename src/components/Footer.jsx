@@ -105,10 +105,10 @@ const Footer = () => {
                 <p>&copy; 2022 | <strong>Penito Furniture</strong></p>
                 <br />
                 <p>Design by <strong>Ibraheem (Ingenious_02)</strong></p>
-                (<a href='https://twitter.com/Ingenious_02' target='_blank'>Twitter </a>|<a href='https://t.co/lIn20BF2NH' target='_blank'> LinkedIn</a> )
+                (<a href='https://twitter.com/Ingenious_02' target='_blank' rel="noreferrer">Twitter </a>|<a href='https://t.co/lIn20BF2NH' target='_blank' rel="noreferrer"> LinkedIn</a> )
                 <br /> <br />
                 <p>Code by <strong>Oluwafemi Ojetokun</strong>
-                (<a href='https://twitter.com/OjetokunF' target='_blank'>Twitter </a>|<a href='https://github.com/FemiOje'> GitHub</a> )
+                (<a href='https://twitter.com/OjetokunF' target='_blank' rel="noreferrer">Twitter </a>|<a href='https://github.com/FemiOje' rel="noreferrer"> GitHub</a> )
                 </p>
                 <br />
             </div>

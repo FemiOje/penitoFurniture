@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: column;
     /* height: fit-content; */
-    max-width: 170px;
+    width: 200px;
     background: #F8FBFB;
     border-radius: 8px;
     align-items: center;
-    margin: 0.25rem;
+    margin: 1rem 0.75rem;
+    padding: 0.5rem;
 }
 /* .card div{
     padding: 1rem;
@@ -40,4 +41,21 @@
     font-weight:600;
     font-size:12px;
     /* line-height:24.46px; */
+}
+
+.add--to--cart{
+    background-color: #1FB890;
+    color: #F8FBFB;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 3px auto;
+}
+
+.add--to--cart:hover{
+    background-color: #259678;
 }
