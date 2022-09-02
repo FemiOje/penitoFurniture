@@ -12,11 +12,9 @@
     #hero{
         display: flex;
         flex-wrap: wrap;
+        /* flex-direction: column-reverse; */
     }
-    /* .hero--text{
-        padding: 0;
-        margin: 0;
-    } */
+    
     .hero--images{
         margin: 0 auto;
         
@@ -24,7 +22,6 @@
     .hero--images > svg{
         height: fit-content;
         width: fit-content;
-        padding-top: 2rem;
     }
 }
 
@@ -34,7 +31,7 @@
     grid-column-start: 1;
     grid-column-end: 3;
     /* padding: 10px; */
-    align-self: center;
+    /* align-self: center; */
 }
 
 .hero--text > h1{
@@ -42,6 +39,10 @@
     font-weight: 500;
     font-size: xx-large;
     line-height: normal;
+}
+
+.hero--text > p{
+    font-size: large;
 }
 
 .the--best{
@@ -62,32 +63,37 @@
     vertical-align: middle;
 }
 
-.hero--buttons > button{
-    border: 1px solid black;
+.hero--buttons > a{
+    margin-right: 2rem;
 }
 
 @media screen and (max-width: 768px){
     .hero--text{
         text-align: center;
     }
+
+    .hero--buttons{
+        justify-content: space-around;
+    }
+
+    .hero--buttons > a{
+        margin: 0;
+    }
     
     .hero--images{
         display: flex;
         padding: 0;
-        margin-top: 2rem;
     }
 }
 .shop--now--button{
     border: none;
     background-color: #1C2A2F;
     color: #FBFDFD;
-    margin: 1rem;
 }
 
 .watch--video--button{ 
     border-radius: 8px;
     border: none;
-    margin: 1rem;
 }
 
 .shop--now--button > span, .watch--video--button > span{

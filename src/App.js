@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Collection from './components/Collection';
-import AllCards from './components/AllCards';
+// import AllCards from './components/AllCards';
 import ServicesAndBenefits from './components/ServicesAndBenefits';
 import CustomerReviews from './components/CustomerReviews';
 import PartnersAndSponsors from './components/PartnersAndSponsors';
@@ -16,14 +16,12 @@ function App() {
       <Navbar />  
       <Hero />  
       <Collection /> 
-      <AllCards /> 
+      {/* <AllCards />  */}
       <ServicesAndBenefits />
       <CustomerReviews />
       <PartnersAndSponsors />
       <InstagramGallery />
       <Footer />
-      {/* <Login />
-      <Signup /> */}
     </>
   );
 }

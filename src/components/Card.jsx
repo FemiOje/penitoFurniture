@@ -38,12 +38,12 @@ const Card = (props) => {
             <path d="M25.2262 9.65555H15.5982L12.6131 0L9.628 9.65555H0L7.77808 15.6142L4.83502 25.2262L12.6131 19.2676L20.3912 25.2262L17.4061 15.5707L25.2262 9.65555Z" fill="#FDD835" />
           </svg>
         </div>
-        <div className="card--functionality">
+        {/* <div className="card--functionality">
           <button className='decrease--quantity' onClick={decreaseQuantity}>-</button>
           <p>{orderQuantity}</p>
           <button className='increase--quantity' onClick={increaseQuantity}>+</button>
           <button className='add--to--cart'>Add to Cart</button>
-        </div>
+        </div> */}
       </div>
     </div>
   )

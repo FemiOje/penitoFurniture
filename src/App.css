@@ -1,7 +1,7 @@
 *{
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
+  scroll-behavior: smooth;
   /* margin: 0;
   padding: 0;
   box-sizing: border-box; */
@@ -25,9 +25,6 @@ a{
   text-decoration: none;
 }
 
-/* a:hover, a > p:hover{
-  color: #61dafb;
-} */
 
 p{
   color: #58666B;

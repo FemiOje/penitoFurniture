@@ -4,13 +4,13 @@ import Card from '../components/Card'
 
 const AllFurniture = () => {
   return (
-    <div className='collection--cards'>
+    <section className='collection--cards'>
         {cardData.map(
         (item)=>{
             return (<Card key={item.id} {...item}/>)
         })
         }          
-    </div>
+    </section>
   )
 }
 

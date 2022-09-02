@@ -79,13 +79,15 @@ const Collection = () => {
 // ]
   
   return (
-    <section id='collection'>
-        <div className="collection--text">
-          <h3>A Huge Collection of Furniture Products for your Interior</h3>
-          <p>If you have the experience of ten years in an industry, no apostrohe is needed. If you have ten years’ experience, an apostrophe is needed.</p>
-        </div>
+    <div id='collection'>
+        <section>
+          <div className="collection--text">
+            <h3>A Huge Collection of Furniture Products for your Interior</h3>
+            <p>If you have the experience of ten years in an industry, no apostrohe is needed. If you have ten years’ experience, an apostrophe is needed.</p>
+          </div>
+        </section>
         
-        <nav className="collection--nav">
+        <div className="collection--nav">
           <Link to="/all-furniture">
             <button>All Furniture</button>
           </Link>
@@ -110,7 +112,7 @@ const Collection = () => {
           <Link to="/others">
             <button>Others</button>
           </Link>
-        </nav>
+        </div>
 
         <Outlet/>
 
@@ -122,7 +124,7 @@ const Collection = () => {
           }          
         </div> */}
           
-    </section>
+    </div>
   )
 }
 

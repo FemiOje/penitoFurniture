@@ -7,9 +7,8 @@ const Bedroom = () => {
             (item) => {
                 // fix bug
                 return (item.categories === "bedroom" ) ?
-                <Card key={item.id} {...item}/> : 
-                <p>Loading...</p>
-                // (returns only cards with "bedroom" as their only label)
+                <Card key={item.id} {...item}/> : <p>Loading...</p>
+                // (returns cards with only "bedroom" as their only label)
             }
         );
   return (
