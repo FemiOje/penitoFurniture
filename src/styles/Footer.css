@@ -2,6 +2,11 @@ footer{
     background-color: #f0efef;
 }
 
+footer a :hover{
+    color: #b9b9b9;
+    /* color: #ff0505; */
+}
+
 .footer--container{
     display: grid;
 }
@@ -54,16 +59,13 @@ footer{
     grid-row-end: 2;
 }
 
-/* a > p:hover{
-    color: #61dafb;
-} */
-
 .copyright{
     padding: 20px;
-    
+    line-height: 2px;
+    text-align: center;
 }
 
 .copyright > p{
     margin: 0 auto;
-    text-align: center;
+    line-height: normal;
 }

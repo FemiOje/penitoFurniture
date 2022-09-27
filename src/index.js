@@ -12,29 +12,35 @@ import Sofas from './routes/Sofas';
 import Outdoors from './routes/Outdoors';
 import Kitchen from './routes/Kitchen';
 import Others from './routes/Others';
+import ComingSoon from './routes/ComingSoon';
+import Cart from './routes/Cart';
+import NotFound from './routes/NotFound';
+import GlobalState from './context/GlobalState';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="all-furniture" element={<AllFurniture />} />
-          <Route path="living-room" element={<LivingRoom />} />
-          <Route path="office" element={<Office />} />
-          <Route path="bedroom" element={<Bedroom />} />
-          <Route path="sofas" element={<Sofas />} />
-          <Route path="outdoors" element={<Outdoors />} />
-          <Route path="kitchen" element={<Kitchen />} />
-          <Route path="others" element={<Others />} />
-          <Route path="*" element={
-            <main style={{ padding: "1rem" }}>
-              <p>There's nothing here!</p>
-            </main>}
-          />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <GlobalState>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<AllFurniture />} />
+            <Route path="living-room" element={<LivingRoom />} />
+            <Route path="office" element={<Office />} />
+            <Route path="bedroom" element={<Bedroom />} />
+            <Route path="sofas" element={<Sofas />} />
+            <Route path="outdoors" element={<Outdoors />} />
+            <Route path="kitchen" element={<Kitchen />} />
+            <Route path="others" element={<Others />} />
+          </Route>
+          <Route path="cart" element={<Cart />} />
+          <Route path="coming-soon" element={<ComingSoon/>} />
+          <Route path="*" element={<NotFound/>} />     
+        </Routes>
+      </BrowserRouter>
+    </GlobalState>
   </React.StrictMode>
 );
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/Navbar.css'
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [navIsOpen, setNavIsOpen] = useState(false)
     function toggleDropdown() {
         setNavIsOpen((prevState) => !prevState)
@@ -32,52 +33,63 @@ const Navbar = () => {
                     <a href='/#'>
                         <p>Home</p>
                     </a>
-                    <a href='#services--and--benefits'>
+                    <a href='/#shop'>
+                        <p>Shop</p>
+                    </a>
+                    <a href='/#services--and--benefits'>
                         <p>Services</p>
                     </a>
-                    <a href='#customer--reviews'>
+                    <a href='/#customer--reviews'>
                         <p>Reviews</p>
                     </a>
-                    <a href='#partners--and--sponsors'>
+                    <a href='/#partners--and--sponsors'>
                         <p>Partners &amp; Sponsors</p>
                     </a>
-                    <a href='#instagram--gallery'>
+                    <a href='/#gallery'>
                         <p>Gallery</p>
                     </a>
                 </div>
                 <div className="nav--icons">
-                    <a href='#/' className='cart'>
-                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.55 11C16.3 11 16.96 10.59 17.3 9.97L20.88 3.48C20.9643 3.32843 21.0076 3.15747 21.0055 2.98406C21.0034 2.81064 20.9561 2.64077 20.8682 2.49126C20.7803 2.34175 20.6549 2.21778 20.5044 2.13162C20.3539 2.04545 20.1835 2.00009 20.01 2H5.21003L4.27003 0C4.27003 0 1.99998 3.01335e-06 1.00003 0C7.19428e-05 -3.01334e-06 6.10352e-05 2 1.00003 2C2 2 3.00003 2 3.00003 2L6.60003 9.59L5.25003 12.03C4.52003 13.37 5.48003 15 7.00003 15C7.00003 15 18 15 19 15C20.0001 15 20.0001 13 19 13C18 13 7.00003 13 7.00003 13L8.10003 11H15.55ZM6.16003 4H18.31L15.55 9H8.53003L6.16003 4ZM7.00003 16C5.90003 16 5.01003 16.9 5.01003 18C5.01003 19.1 5.90003 20 7.00003 20C8.10003 20 9.00003 19.1 9.00003 18C9.00003 16.9 8.10003 16 7.00003 16ZM17 16C15.9 16 15.01 16.9 15.01 18C15.01 19.1 15.9 20 17 20C18.1 20 19 19.1 19 18C19 16.9 18.1 16 17 16Z" fill="#122025" />
-                        </svg>
-                    </a>
+                    <Link to='/cart' className='cart'>
+                        <button className='cart--button'>
+                            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.55 11C16.3 11 16.96 10.59 17.3 9.97L20.88 3.48C20.9643 3.32843 21.0076 3.15747 21.0055 2.98406C21.0034 2.81064 20.9561 2.64077 20.8682 2.49126C20.7803 2.34175 20.6549 2.21778 20.5044 2.13162C20.3539 2.04545 20.1835 2.00009 20.01 2H5.21003L4.27003 0C4.27003 0 1.99998 3.01335e-06 1.00003 0C7.19428e-05 -3.01334e-06 6.10352e-05 2 1.00003 2C2 2 3.00003 2 3.00003 2L6.60003 9.59L5.25003 12.03C4.52003 13.37 5.48003 15 7.00003 15C7.00003 15 18 15 19 15C20.0001 15 20.0001 13 19 13C18 13 7.00003 13 7.00003 13L8.10003 11H15.55ZM6.16003 4H18.31L15.55 9H8.53003L6.16003 4ZM7.00003 16C5.90003 16 5.01003 16.9 5.01003 18C5.01003 19.1 5.90003 20 7.00003 20C8.10003 20 9.00003 19.1 9.00003 18C9.00003 16.9 8.10003 16 7.00003 16ZM17 16C15.9 16 15.01 16.9 15.01 18C15.01 19.1 15.9 20 17 20C18.1 20 19 19.1 19 18C19 16.9 18.1 16 17 16Z" fill="#122025" />
+                            </svg>
+                            {props.cartItemNumber > 0 && <p><strong className='cart--notification'>({props.cartItemNumber})</strong></p>}
+                        </button>
+                    </Link>
                 </div>
                 <div className="hamburger">
                     <button onClick={toggleDropdown}>                       
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style={{fill: "#000000"}}><g fill="none" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:'normal'}}><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#000000"><path d="M17.2,40.13333c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,80.26667c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,120.4c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843z"></path></g></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style={{fill: "#000000"}}><g fill="none" fillRule="nonzero" stroke="none" strokeWidth="1" strokeLinecap="butt" strokeLinejoin="miter" strokeMiterlimit="10" strokeDasharray="" strokeDashoffset="0" fontFamily="none" fontWeight="none" fontSize="none" textAnchor="none" style={{mixBlendMode:'normal'}}><path d="M0,172v-172h172v172z" fill="#ffffff"></path><g fill="#000000"><path d="M17.2,40.13333c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,80.26667c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843zM17.2,120.4c-2.06765,-0.02924 -3.99087,1.05709 -5.03322,2.843c-1.04236,1.78592 -1.04236,3.99474 0,5.78066c1.04236,1.78592 2.96558,2.87225 5.03322,2.843h137.6c2.06765,0.02924 3.99087,-1.05709 5.03322,-2.843c1.04236,-1.78592 1.04236,-3.99474 0,-5.78066c-1.04236,-1.78592 -2.96558,-2.87225 -5.03322,-2.843z"></path></g></g></svg>
                     </button>
                 </div>
             </div>
             {navIsOpen &&
-                <div className="nav--dropdown--items" onBlur={closeDropdown}>
-                    <a href='#hero'>
+                <div className="nav--dropdown--items">
+                    <a href='/#' onClick={closeDropdown}>
                         <p>Home</p>
                     </a>
-                    <a href='#services--and--benefits'>
+                    <a href='/#shop' onClick={closeDropdown}>
+                        <p>Shop</p>
+                    </a>
+                    <a href='/#services--and--benefits' onClick={closeDropdown}>
                         <p>Services</p>
                     </a>
-                    <a href='#customer--reviews'>
+                    <a href='/#customer--reviews' onClick={closeDropdown}>
                         <p>Customer Reviews</p>
                     </a>
-                    <a href='#partners--and--sponsors'>
+                    <a href='/#partners--and--sponsors' onClick={closeDropdown}>
                         <p> Partners &amp; Sponsors </p>
                     </a>
-                    <a href='#instagram--gallery'>
+                    <a href='/#gallery' onClick={closeDropdown}>
                         <p>Gallery</p>
                     </a>
-                    <a href='#hero'>
-                        <p>Cart</p>
-                    </a>
+                    <Link to='/cart' onClick={closeDropdown}>
+                        <p>Cart 
+                            <span><strong className='cart--notification'>({props.cartItemNumber})</strong></span>
+                        </p>
+                    </Link>
                 </div>
             }
         </nav>

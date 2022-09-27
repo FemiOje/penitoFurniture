@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import '../styles/Footer.css'
 
 const Footer = () => {
@@ -46,66 +47,80 @@ const Footer = () => {
                         </span>
                     </div>
                 </div>
+
                 <div className='help'>
                     <h3>Help &amp; Information</h3>
-                    <a href="#">
+                    <Link to="/coming-soon">
                         <p>Pagination</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+                
+                    <Link to="/coming-soon">
                         <p>Terms &amp; Conditions</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Contact</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Home Page</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Terms of Use</p>
-                    </a>
+                    </Link>
                 </div>
+
                 <div className='about--us'>
                     <h3>About Us</h3>
-                    <a href="#">
-                        <p>Help Center</p>
-                    </a>
-                    <a href="#">
-                        <p>Address Store</p>
-                    </a>
-                    <a href="#">
-                        <p>Privacy Policy</p>
-                    </a>
-                    <a href="#">
-                        <p>Receivers &amp; Amplifiers</p>
-                    </a>
-                    <a href="#">
-                        <p>Clothing</p>
-                    </a>
+                        <Link to="/coming-soon">
+                            <p>Help Center</p>
+                        </Link>
+
+                        <Link to="/coming-soon">
+                            <p>Address Store</p>
+                        </Link>
+
+                        <Link to="/coming-soon">
+                            <p>Privacy Policy</p>
+                        </Link>
+
+                        <Link to="/coming-soon">
+                            <p>Receivers &amp; Amplifiers</p>
+                        </Link>
+                        <Link to="/coming-soon">
+                            <p>Clothing</p>
+                        </Link>
                 </div>
                 <div className='categories'>
                     <h3>Categories</h3>
-                    <a href="#">
+                    <Link to="/coming-soon">
                         <p>Delivery</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Legal Notice</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Documentation</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Secure Payment</p>
-                    </a>
-                    <a href="#">
+                    </Link>
+
+                    <Link to="/coming-soon">
                         <p>Stores</p>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className='copyright'>
                 <p>&copy; 2022 | <strong>Penito Furniture</strong></p>
                 <br />
-                <p>Design by <strong>Ibraheem (Ingenious_02)</strong></p>
+                <p>Design by <strong>Ibraheem (Ingenious_02)</strong>
                 (<a href='https://twitter.com/Ingenious_02' target='_blank' rel="noreferrer">Twitter </a>|<a href='https://t.co/lIn20BF2NH' target='_blank' rel="noreferrer"> LinkedIn</a> )
+                </p>
                 <br /> <br />
                 <p>Code by <strong>Oluwafemi Ojetokun</strong>
                 (<a href='https://twitter.com/OjetokunF' target='_blank' rel="noreferrer">Twitter </a>|<a href='https://github.com/FemiOje' rel="noreferrer"> GitHub</a> )
