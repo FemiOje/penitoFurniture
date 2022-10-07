@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-// import { useState } from "react";
 import CouchSofa from  '../images/couch-sofa.png'
 import FootRestCouch from '../images/foot-rest-couch.png'
 import GardenTable from '../images/garden-table.png'
@@ -98,7 +97,6 @@ function GlobalState(props) {
     }
 ]
 
-  // const [cart, setCart] = useState([]);
 
   const [cartState, dispatch] = useReducer(shopReducer, { cart: [] });
 

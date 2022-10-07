@@ -24,7 +24,7 @@ nav{
 }
 
 section{
-  padding: 0 3rem;
+  padding: 3.5rem 3rem;
 }
 
 @media screen and (max-width: 768px) {

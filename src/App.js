@@ -4,7 +4,7 @@ import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 
 function App() {
-
+  
   return (
     <>
       <Navbar />  

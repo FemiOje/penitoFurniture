@@ -1,0 +1,16 @@
+.payment--successful{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.payment--successful--gif{
+    width: 30vw;
+    height: 50vh;
+}
+
+@media screen and (max-width: 768px){
+    .payment--successful--gif{
+        width: 80vw;
+        height: 30vh;
+    }
+}

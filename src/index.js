@@ -16,6 +16,7 @@ import ComingSoon from './routes/ComingSoon';
 import Cart from './routes/Cart';
 import NotFound from './routes/NotFound';
 import GlobalState from './context/GlobalState';
+import PaymentSuccessful from './routes/PaymentSuccessful';
 
 
 
@@ -36,6 +37,7 @@ root.render(
             <Route path="others" element={<Others />} />
           </Route>
           <Route path="cart" element={<Cart />} />
+          <Route path="cart/payment-successful" element={<PaymentSuccessful />}/>
           <Route path="coming-soon" element={<ComingSoon/>} />
           <Route path="*" element={<NotFound/>} />     
         </Routes>

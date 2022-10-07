@@ -1,31 +1,36 @@
 import Navbar from "../components/Navbar";
 import React from 'react'
 import ShopContext from "../context/ShopContext";
-import '../styles/Card.css'
+import '../styles/Card.css';
+import { Toaster } from 'react-hot-toast';
 
 
-const AllFurniture = (props) => {
+
+const AllFurniture = () => {
   
   return (
     <ShopContext.Consumer>
       {context => (
         <React.Fragment>
+          
+          <Toaster />
+
           <Navbar
             cartItemNumber={context.cart.reduce((count, curItem) => {
               return count + curItem.quantity;
             }, 0)}
           />
-          <section className="collection--cards">
+          <div className="collection--cards">
               {context.products.map(product => (
-              <div className='card'>
+              <div key={product.id} className='card'>
                 <div className="card--image">
                   <img src={`${product.imageLink}`} alt={`${product.imageLink}`} />
                 </div>
                 <div className="card--text">
                   <p>{product.productName}</p>
                   <div className="card--prices">
-                    <p className="main--price"><strike>${product.productPrice}</strike></p>
-                    <p className="discounted--price">${product.discountedPrice}</p>
+                    <p className="main--price"><strike>${product.productPrice.toFixed(2)}</strike></p>
+                    <p className="discounted--price">${product.discountedPrice.toFixed(2)}</p>
                   </div>
                   <div className="card--rating">
                     <svg width="15" height="15" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,8 +55,8 @@ const AllFurniture = (props) => {
                   >Add to Cart</button>
                 </div>
               </div>
-              ))}
-          </section>
+              ))}                
+          </div>
         </React.Fragment>
       )}
 </ShopContext.Consumer>

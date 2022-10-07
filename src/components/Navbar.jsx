@@ -9,11 +9,7 @@ const Navbar = (props) => {
     }
     function closeDropdown() {
         setNavIsOpen(false)
-    }
-    // function openDropdown() {
-    //     setNavIsOpen(true)
-    // }
-   
+    }   
     
     return (
         <nav className='navbar'>

@@ -1,5 +1,13 @@
+import toast from 'react-hot-toast';
+
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+  
+const notifyAddedToCart = () => toast.success(
+  <span>
+      1 item added to cart.
+  </span>
+)
 
 const addProductToCart = (product, state) => {
   console.log("adding product", product);
@@ -7,6 +15,7 @@ const addProductToCart = (product, state) => {
   const updatedItemIndex = updatedCart.findIndex(
     item => item.id === product.id
   );
+  notifyAddedToCart();
 
   if (updatedItemIndex < 0) {
     updatedCart.push({ ...product, quantity: 1 });

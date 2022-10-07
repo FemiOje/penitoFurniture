@@ -1,16 +1,20 @@
 import '../styles/Cart.css'
-import React, { useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import ShopContext from "../context/ShopContext";
 import Navbar from '../components/Navbar';
 
 
-function CartPage(props) {
+function CartPage() {
   const context = useContext(ShopContext);
-
+  
+  const totalPrice = context.cart.reduce((total, curItem) => {
+    return total + (curItem.discountedPrice * curItem.quantity);
+  }, 0)
+  
   useEffect(() => {
     console.log(context);
-  }, [context]);
+  }, [context]);  
 
   return (
     <React.Fragment>
@@ -26,7 +30,7 @@ function CartPage(props) {
             <li key={cartItem.id}>
               <img src={cartItem.imageLink} alt={cartItem.imageLink} width={'60px'} height={'50px'} />
               <div>
-                <strong>{cartItem.productName}({cartItem.quantity})</strong> - ${cartItem.discountedPrice} 
+                <strong>{cartItem.productName}({cartItem.quantity})</strong> - ${cartItem.discountedPrice.toFixed(2)} X {cartItem.quantity} = ${(cartItem.quantity * cartItem.discountedPrice).toFixed(2)}
               </div>
               <div>
                 <button
@@ -44,13 +48,14 @@ function CartPage(props) {
         </ul>
         {context.cart.length > 0 &&
         <>
-          <h4>Total: $
-            {context.cart.reduce((total, curItem) => {
-                return total + curItem.discountedPrice;
-              }, 0)
-            }
+          <h4>Total: ${totalPrice.toFixed(2).toLocaleString()}
           </h4>
-          <button className='make--payment'>Make Payment</button>
+            <Link to="payment-successful">
+              <button className='make--payment'>
+                Make Payment
+              </button>
+            </Link>
+
         </>}
       </main>
     </React.Fragment>

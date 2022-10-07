@@ -1,0 +1,15 @@
+#coming--soon{
+    text-align: center;
+}
+
+.coming--soon--gif{
+    width: 30vw;
+    height: 50vh;
+}
+
+@media screen and (max-width: 768px){
+    .coming--soon--gif{
+        width: 80vw;
+        height: 30vh;
+    }
+}
