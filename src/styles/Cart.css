@@ -43,20 +43,21 @@
 }
 
 
-.remove--from--cart{
+.remove--from--cart, .clear--cart{
     color: white;
     background-color: red;
     padding: 0.6rem;
     box-shadow: #0000003d 0px 3px 8px;
 }
 
-.remove--from--cart:hover{
+.remove--from--cart:hover, .clear--cart:hover{
     background-color: #cf0202;
 }
 
 .make--payment{
     margin-left: auto;
     background-color: #14ee14;
+    margin-right: 1rem;
     box-shadow: #0000003d 0px 3px 8px;
     color: white;
     border: none;
@@ -67,10 +68,24 @@
     cursor: pointer;
 }
 
+.clear--cart{
+    margin-left: auto;
+    background-color: red;
+    box-shadow: #0000003d 0px 3px 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    cursor: pointer; 
+}
+
 .make--payment:hover{
     background-color: #099109;
 }
   
 .no--items{
     text-align: center;
+    min-height: 40vh;
 }
