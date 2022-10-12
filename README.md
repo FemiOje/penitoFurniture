@@ -1,2 +1,2 @@
-Penito Furniture- A furniture(e-commerce) web application built with ReactJS. 
-React Router was used for the routing, React Hot Toast for notifications, useReducer hook to manage the cart, and sessionStorage to store ordered items for the duration of the browser session.
+Penito Furniture- A furniture(e-commerce) web application built with ReactJS(18.2.0), React router(v6.4.1) for routing, React Hot Toast(v2.4.0) for notifications, and Redux Toolkit(v1.8.5) to manage the cart.
+The cart state is stored in session storage with Redux Persist(v6.0.0).

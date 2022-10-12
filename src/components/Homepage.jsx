@@ -136,20 +136,18 @@ const Homepage = () => {
       </section>
 
       <div id='shop'>
-        <section>
-          <div className="collection--text">
-            <h3>A Huge Collection of Furniture Products for your Interior</h3>
-            <p>If you have the experience of ten years in an industry, no apostrohe is needed. If you have ten years’ experience, an apostrophe is needed.</p>
-          </div>
-        </section>
+        <div className="collection--text">
+          <h3>A Huge Collection of Furniture Products for your Interior</h3>
+          <p>If you have the experience of ten years in an industry, no apostrohe is needed. If you have ten years’ experience, an apostrophe is needed.</p>
+        </div>
 
         <div className="collection--nav">
           {collectionNavItems.map((item) => (
             <NavLink
               style={({ isActive }) => {
                 return {
-                 "cursor": "pointer",
-                 "border": "none",
+                  "cursor": "pointer",
+                  "border": "none",
                   "fontWeight": "500",
                   "borderRadius": "20px",
                   "justifyContent": "center",

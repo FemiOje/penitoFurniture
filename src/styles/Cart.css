@@ -26,15 +26,28 @@
     align-items: center;
 }
 
-.remove--from--cart{
-    background-color: red;
-    color: white;
+.decrement--quantity, .increment--quantity, .remove--from--cart{
+    margin: 0.3rem;
     border: none;
     border-radius: 5px;
     height: fit-content;
     width: fit-content;
-    padding: 1rem;
+    margin: 0.5rem;
     cursor: pointer;
+}
+
+.increment--quantity, .decrement--quantity{
+    color: black;
+    box-shadow: #0000003d 0px 3px 8px;
+    padding: 0.3rem;
+}
+
+
+.remove--from--cart{
+    color: white;
+    background-color: red;
+    padding: 0.6rem;
+    box-shadow: #0000003d 0px 3px 8px;
 }
 
 .remove--from--cart:hover{
@@ -44,6 +57,7 @@
 .make--payment{
     margin-left: auto;
     background-color: #14ee14;
+    box-shadow: #0000003d 0px 3px 8px;
     color: white;
     border: none;
     border-radius: 5px;

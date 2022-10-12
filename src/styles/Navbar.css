@@ -60,23 +60,20 @@
 }
 
 @media screen and (max-width: 863px) {
-    .nav--items{
-        display: none;
-    }
-    .nav--icons{
-        display: none;
-    }
-}
-
-.hamburger{
-    display: none;
-}
-
-@media screen and (max-width: 863px) {
     .hamburger{
         display: block;
         margin-left: auto;
     }
+    .nav--items{
+        display: none;
+    }
+    /* .nav--icons{
+        display: none;
+    } */
+}
+
+.hamburger{
+    display: none;
 }
 
 .hamburger > button{
