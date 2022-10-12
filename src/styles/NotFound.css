@@ -1,0 +1,15 @@
+#not--found{
+    text-align: center;
+}
+
+.not--found--gif{
+    width: 30vw;
+    height: 50vh;
+}
+
+@media screen and (max-width: 768px){
+    .not--found--gif{
+        width: 80vw;
+        height: 30vh;
+    }
+}

@@ -1,11 +1,91 @@
 .card{
-    width: 170px;
-    height: 200px;
-    background-color: #f0f8ff;
     display: flex;
     flex-direction: column;
+    /* height: fit-content; */
+    width: 200px;
+    background: #f0efef;
+    border-radius: 8px;
     align-items: center;
-    padding: 16px;
-    margin: 16px;
-    gap: 40px;
+    margin: 1rem 0.75rem;
+    padding: 0.5rem;
+}
+/* .card div{
+    padding: 1rem;
+} */
+/* .card--image{
+    height: 1px;
+    border: 1px solid red;
+} */
+
+.card--text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: auto;
+    line-height: 6px;
+}
+
+.card--prices{
+    display: flex;
+    flex-direction: row;
+}
+.main--price{
+    color: #A8B6BB;
+    font-weight: 300;
+    padding-right: 1rem;
+}
+.discounted--price{
+    color: #1FB890;
+    padding-left: 1rem;
+}
+
+.card--text > p, .card--prices > p{
+    font-weight:600;
+    font-size:12px;
+    /* line-height:24.46px; */
+}
+
+.card--functionality{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.card--functionality button{
+    border-radius: 50%;
+    border: none;
+    background-color: #d7dcdf;
+    color: #F8FBFB;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+.card--functionality button:hover{
+    background-color: #838383;
+}
+
+.card--functionality > input{
+    border: none;
+    width: 2.5rem;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.add--to--cart{
+    background-color: #1FB890;
+    color: #F8FBFB;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+}
+
+.add--to--cart:hover{
+    background-color: #259678;
 }
