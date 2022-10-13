@@ -1,15 +1,21 @@
 import '../styles/Cart.css'
 import React from "react";
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { incrementQuantity, decrementQuantity, removeItem } from '../features/cart/cartSlice';
+import { incrementQuantity, decrementQuantity, removeItem, clearCart } from '../features/cart/cartSlice';
 import { Toaster } from 'react-hot-toast';
 
 function CartPage() {
   const cartItems = useSelector((state) => state.cartItems);
   const totalAmount = useSelector((state) => state.cartTotalAmount);
   const dispatch = useDispatch();
+  let dollarUSlocale = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    useGrouping: true,
+}); 
 
   function NoItems() {
     return (
@@ -47,7 +53,7 @@ function CartPage() {
                   >
                     +
                   </button>
-                </span> = ${(cartItem.quantity * cartItem.discountedPrice).toFixed(2)}
+                </span> = {dollarUSlocale.format(cartItem.quantity * cartItem.discountedPrice)}
               </div>
 
               <div>
@@ -63,16 +69,28 @@ function CartPage() {
         </ul>
         {cartItems.length > 0 &&
           <>
-            <h4>Total: $ {totalAmount}
+          
+  
+            <h4>Total: {dollarUSlocale.format(totalAmount)}
             </h4>
             <Link to="payment-successful">
-              <button className='make--payment'>
+              <button 
+                className='make--payment'
+                onClick={() => dispatch(clearCart())}
+              >
                 Make Payment
               </button>
             </Link>
 
+            <button 
+              className='clear--cart'
+              onClick={() => dispatch(clearCart())}
+            >
+              Clear Cart
+            </button>
           </>}
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

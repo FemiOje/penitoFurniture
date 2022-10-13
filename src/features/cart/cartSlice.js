@@ -13,6 +13,12 @@ const notifyAddedToCart = () => toast.success(
     </span>
   )
 
+  const notifyCartCleared = () =>toast.error(
+    <span>
+        Cart cleared.
+    </span>
+  )
+
 const initialState = {
     cartItems : [],
     cartTotalProducts : 0,
@@ -29,36 +35,44 @@ const cartSlice = createSlice({
                 itemInCart.quantity++;
             } 
             else{
-            state.cartItems.push({ ...action.payload, quantity: 1});
+                state.cartItems.push({ ...action.payload, quantity: 1});
             }
-            state.cartTotalAmount += (state.cartItems.discountedPrice * state.cartItems.quantity);
+            state.cartTotalAmount += action.payload.discountedPrice;
             state.cartTotalProducts = state.cartItems.length;
             notifyAddedToCart();
         },
         incrementQuantity: (state, action) => {
             const item = state.cartItems.find((item) => item.id === action.payload.id);
             item.quantity += 1;
+            state.cartTotalAmount += action.payload.discountedPrice;
         },
         decrementQuantity: (state, action) => {
             const item = state.cartItems.find((item) => item.id === action.payload.id);
             if (item.quantity === 1) {
-              item.quantity = 1;
+                item.quantity = 1;
             } else {
-              item.quantity --;
+                item.quantity --;
+                state.cartTotalAmount -= action.payload.discountedPrice;
             }
         },
         removeItem: (state, action) => {
             const removeItem = state.cartItems.filter((item) => item.id !== action.payload.id);
             state.cartItems = removeItem;
-            state.cartTotalAmount -= (state.cartItems.discountedPrice * state.cartItems.quantity);
+            state.cartTotalAmount -= (action.payload.discountedPrice * action.payload.quantity);
             state.cartTotalProducts = state.cartItems.length;
             notifyRemovedFromCart();
         },
+        clearCart: (state) =>{
+            state.cartItems = [];
+            state.cartTotalProducts = 0;
+            state.cartTotalAmount = 0;
+            notifyCartCleared();
+        }
     },
 })
 
 
 
-export const { addToCart, incrementQuantity, decrementQuantity, removeItem } = cartSlice.actions;
+export const { addToCart, incrementQuantity, decrementQuantity, removeItem, clearCart } = cartSlice.actions;
 
 export const cartReducer =  cartSlice.reducer;

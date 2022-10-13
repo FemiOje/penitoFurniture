@@ -1,6 +1,5 @@
 #hero{
     display: grid;
-    margin-top: 3rem;
     padding-bottom: 0;
 }
 
@@ -16,7 +15,7 @@
 }
 
 .hero--text{
-    /* display: grid; */
+    display: grid;
     grid-column-start: 1;
     grid-column-end: 3;
     align-self: center;
@@ -104,9 +103,9 @@
     align-items: center;
     justify-items: center;
     vertical-align: middle;
-    margin-right: 0.7rem;
+    margin-right: 0.4rem;
+    padding: 5px;
 }
-
 
 .hero--images{
     grid-column-start: 3;
@@ -114,39 +113,11 @@
     padding: 0.5rem;
 }
 
-/* .hero--images > svg{
-    display: flex;
-    margin: 1rem;
-    float: right;
-    height: fit-content;
-    width: fit-content;
-} */
-
-/* @media screen and (max-width: 320px) {
-    .hero--images > svg{
-        width: 300px;
-    }
-}
-
-
-@media screen and (max-width: 375px) {
-    .hero--images > svg{
-        width: 350px;
-    }
-} */
-
 @media screen and (max-width: 425px) {
     .hero--images{
         width: 100%;
     }
 }
-
-/* @media screen and (max-width: 768px) {
-    .hero--images >svg{
-        height: 40vh;
-        width: 700px;
-    }
-} */
 
 @media screen and (max-width: 1024px) {
     .hero--text> h1{
@@ -167,20 +138,18 @@
     }
 }
 
-/* @media screen and (max-width: 2560px) {
-    .hero--images > svg{
-        height: 900px;
-        width: fit-content;
-        padding: 3rem;
-        float: right;
-    }
-} */
 
 
 /* Collection(Shop)*/
 .collection--text{
     color: #122025;
     text-align: center;
+}
+
+@media screen and (max-width: 912px){
+    .collection--text{
+        padding: 0 2rem;
+    }
 }
 
 .collection--nav{
